@@ -9,8 +9,6 @@ A simple and fun game that increases or decreases the score as I click on the ch
 - Pure CSS and JavaScript
 #
 <img src="click_game.png">
-## Important!!!
-The score of the yellow PAC MAN Avatar increases, the points of other avatars decrease.
 #
 ## Codpen.io
 [Codpen account link](https://codepen.io/oguzhan1881)
