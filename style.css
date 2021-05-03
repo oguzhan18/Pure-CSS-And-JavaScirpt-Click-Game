@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+@-webkit-keyframes up {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, -200%);
+  }
+}
+@keyframes up {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, -200%);
+  }
+}
+@-webkit-keyframes down {
+  from {
+    transform: translate(-50%, -200%);
+  }
+  to {
+    transform: translate(-50%, 100%);
+  }
+}
+@keyframes down {
+  from {
+    transform: translate(-50%, -200%);
+  }
+  to {
+    transform: translate(-50%, 100%);
+  }
+}
+@-webkit-keyframes left {
+  from {
+    transform: translate(100%, -50%);
+  }
+  to {
+    transform: translate(-200%, -50%);
+  }
+}
+@keyframes left {
+  from {
+    transform: translate(100%, -50%);
+  }
+  to {
+    transform: translate(-200%, -50%);
+  }
+}
+@-webkit-keyframes right {
+  from {
+    transform: translate(-200%, -50%);
+  }
+  to {
+    transform: translate(100%, -50%);
+  }
+}
+@keyframes right {
+  from {
+    transform: translate(-200%, -50%);
+  }
+  to {
+    transform: translate(100%, -50%);
+  }
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em 1em;
+}
+
+nav > div {
+  margin: 0.25em;
+  font: 2em/1 "VT323", monospace;
+  color: white;
+}
+
+#score {
+  float: left;
+}
+
+#player {
+  float: right;
+}
+
+#game {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 70vmin;
+  height: 70vmin;
+  transform: translate(-50%, -50%);
+  border: 0.5em solid rgb(2, 88, 28);
+  overflow: hidden;
+  cursor: crosshair;
+  border-radius: 50%;
+}
+
+#target {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+#target.PacMan {
+  width: 0;
+  height: 0;
+  border: solid 12.5vmin;
+  border-color: yellow transparent yellow yellow;
+  border-radius: 50%;
+}
+#target.Ghost1 {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: blue;
+}
+#target.Ghost2 {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: green;
+}
+#target.Ghost3 {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: red;
+}
+#target.Ghost4 {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: magenta;
+}
+#target.Ghost5 {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: orange;
+}
+
+#dot {
+  position: fixed;
+  width: 90vw;
+  height: 90vw;
+  left: 50vw;
+  top: calc(22.5vmin + 50vh);
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  background-color: white;
